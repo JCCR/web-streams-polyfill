@@ -1,15 +1,15 @@
 {
   "name": "web-streams-polyfill",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Web Streams, based on the WHATWG spec reference implementation",
   "main": "dist/polyfill.js",
   "browser": "dist/polyfill.min.js",
   "jsnext:main": "index.es6.js",
   "scripts": {
-    "test": "(cd spec/reference-implementation ; npm install && npm run test && cp ../../run-web-platform-tests-on-bundle.js ./ && node --expose_gc run-web-platform-tests-on-bundle.js && rm ./run-web-platform-tests-on-bundle.js)",
+    "test": "(cd spec/reference-implementation ; npm install && npm run test && cp ../../run-web-platform-tests-on-bundle.js ./ && node --expose_gc run-web-platform-tests-on-bundle.js ; rm ./run-web-platform-tests-on-bundle.js)",
     "bundle": "npm-run-all bundle:*",
     "bundle:no-min": "browserify index.es6.js -d -s default -t [ babelify ] | derequire | exorcist ./dist/polyfill.js.map > ./dist/polyfill.js",
-    "bundle:min": "browserify -g uglifyify index.es6.js -d -i ./spec/reference-implementation/lib/utils.js -s default -t [ babelify --plugins babel-plugin-unassert uglifyify ] | derequire | exorcist ./dist/polyfill.min.js.map > ./dist/polyfill.min.js",
+    "bundle:min": "browserify -g [ uglifyify ] index.es6.js -d -s default -t [ babelify --plugins babel-plugin-unassert uglifyify ] | derequire | exorcist ./dist/polyfill.min.js.map > ./dist/polyfill.min.js",
     "build": "npm run bundle",
     "prebuild": "git submodule update --init",
     "prepublish": "npm run build"

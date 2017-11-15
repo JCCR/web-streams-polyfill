@@ -13,7 +13,7 @@ const minimatch = require('minimatch');
 // const CountQueuingStrategy = require('./lib/count-queuing-strategy.js');
 const {
   ReadableStream, WritableStream, TransformStream, ByteLengthQueuingStrategy, CountQueuingStrategy
-} = require('../../dist/polyfill.js');
+} = require('../../dist/polyfill.min.js');
 
 const testsPath = path.resolve(__dirname, 'web-platform-tests/streams');
 const toUpstreamTestsPath = path.resolve(__dirname, 'to-upstream-wpts');

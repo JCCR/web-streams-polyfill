@@ -8,8 +8,9 @@ const { ReadableStream } = _dereq_('./spec/reference-implementation/lib/readable
       { WritableStream } = _dereq_('./spec/reference-implementation/lib/writable-stream'),
       ByteLengthQueuingStrategy = exports.ByteLengthQueuingStrategy = _dereq_('./spec/reference-implementation/lib/byte-length-queuing-strategy'),
       CountQueuingStrategy = exports.CountQueuingStrategy = _dereq_('./spec/reference-implementation/lib/count-queuing-strategy'),
-      TransformStream = exports.TransformStream = _dereq_('./spec/reference-implementation/lib/transform-stream').TransformStream;
+      { TransformStream } = _dereq_('./spec/reference-implementation/lib/transform-stream');
 
+exports.TransformStream = TransformStream;
 exports.WritableStream = WritableStream;
 exports.ReadableStream = ReadableStream;
 const interfaces = {
@@ -25,7 +26,7 @@ exports.default = interfaces;
 
 // Add classes to window
 
-if (typeof window !== "undefined") Object.assign(window, interfaces);
+if (typeof window !== "undefined") Object.assign(window, ...Object.keys(interfaces).filter(k => !(k in window)).map(k => ({ [k]: interfaces[k] })));
 
 },{"./spec/reference-implementation/lib/byte-length-queuing-strategy":8,"./spec/reference-implementation/lib/count-queuing-strategy":9,"./spec/reference-implementation/lib/readable-stream":12,"./spec/reference-implementation/lib/transform-stream":13,"./spec/reference-implementation/lib/writable-stream":15}],2:[function(_dereq_,module,exports){
 (function (global){
