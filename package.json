@@ -1,5 +1,5 @@
 {
-  "name": "web-streams-polyfill",
+  "name": "web-streams-ponyfill",
   "version": "1.4.0",
   "description": "Web Streams, based on the WHATWG spec reference implementation",
   "main": "dist/polyfill.js",
@@ -25,7 +25,8 @@
   "keywords": [
     "streams",
     "whatwg",
-    "polyfill"
+    "polyfill",
+    "ponyfill"
   ],
   "author": "Diwank Singh <diwank.singh@gmail.com>",
   "license": "MIT",

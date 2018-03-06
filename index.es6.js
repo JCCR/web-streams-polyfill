@@ -15,7 +15,3 @@ const interfaces = {
 
 // Export
 export default interfaces;
-
-// Add classes to window
-if ( typeof window !== "undefined" )
-    Object.assign(window, ...Object.keys(interfaces).filter(k => !(k in window)).map(k => ({[k]: interfaces[k]})));
