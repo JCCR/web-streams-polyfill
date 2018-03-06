@@ -1,6 +1,6 @@
 {
   "name": "web-streams-ponyfill",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Web Streams, based on the WHATWG spec reference implementation",
   "main": "dist/polyfill.js",
   "browser": "dist/polyfill.min.js",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creatorrr/web-stream-polyfill.git"
+    "url": "git+https://github.com/JCCR/web-streams-ponyfill.git"
   },
   "keywords": [
     "streams",
@@ -31,9 +31,9 @@
   "author": "Diwank Singh <diwank.singh@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creatorrr/web-streams-polyfill/issues"
+    "url": "https://github.com/JCCR/web-streams-ponyfill/issues"
   },
-  "homepage": "https://github.com/creatorrr/web-streams-polyfill#readme",
+  "homepage": "https://github.com/JCCR/web-streams-ponyfill#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-unassert": "^2.1.2",
