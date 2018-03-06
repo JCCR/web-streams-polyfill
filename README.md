@@ -1,6 +1,5 @@
-# web-streams-polyfill
-Web Streams, based on the WHATWG spec reference implementation.  
-[![Join the chat at https://gitter.im/web-streams-polyfill/Lobby](https://img.shields.io/badge/GITTER-join%20chat-green.svg)](https://gitter.im/web-streams-polyfill/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# web-streams-ponyfill
+Web Streams [ponyfill](https://ponyfill.com), based on the WHATWG spec reference implementation.  
 
 ## Links
  - [Official spec](https://streams.spec.whatwg.org/)
@@ -8,31 +7,21 @@ Web Streams, based on the WHATWG spec reference implementation.
 
 ## Usage
 
-For node.js / browserify users:
-
 ```javascript
 
-var streams = require("web-streams-polyfill");
+var streams = require("web-streams-ponyfill");
 var readable = new streams.ReadableStream;
 
 // Or, in ES6
 
-import { ReadableStream } from "web-streams-polyfill";
+import { ReadableStream } from "web-streams-ponyfill";
 
 ```
 
-For use as polyfill, include the `dist/polyfill.min.js` file in your html before your main script.
+## Credits
 
-```html
-<script src="/path/to/polyfill.min.js"></script>
-<script type="text/javascript">
-
-  var readable = new window.ReadableStream;
-
-</script>
-```
-## Contributors
-
-Thanks to these people for their contributions:
-
+Original author:
+ - Diwank Singh [creatorrr](https://github.com/creatorrr/)
+Contributors:
  - Anders Riutta [ariutta](https://github.com/ariutta)
+ - [bellbind](https://github.com/bellbind)
