@@ -12,7 +12,7 @@
     "bundle:min": "node browserify-uglifyify.js | derequire | exorcist ./dist/polyfill.min.js.map > ./dist/polyfill.min.js",
     "bundle:min-ie11": "node browserify-uglifyify.js ie11 | derequire | exorcist ./dist/polyfill-ie11.min.js.map > ./dist/polyfill-ie11.min.js",
     "build": "npm run bundle",
-    "prebuild": "git submodule update --init",
+    "prebuild": "git submodule update --init --recursive",
     "prepublish": "npm run build"
   },
   "files": [
