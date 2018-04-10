@@ -3,7 +3,7 @@
   "version": "1.4.1",
   "description": "Web Streams, based on the WHATWG spec reference implementation",
   "main": "dist/polyfill.js",
-  "browser": "dist/polyfill.min.js",
+  "browser": "dist/polyfill-ie11.min.js",
   "jsnext:main": "index.es6.js",
   "scripts": {
     "test": "(cd spec/reference-implementation ; npm install && npm run test && node ../../generate-bundle-tests.js && node --expose_gc run-web-platform-tests-on-bundle.js ; rm ./run-web-platform-tests-on-bundle.js)",
